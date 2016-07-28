@@ -83,6 +83,7 @@ Parameter1.once('init', function(){
  * SKILLS
  *
  * WORKING WITH EVENTS II
+ * Each skill has an 'execute', 'executeTrue', 'executeFalse', 'ready', 'busy', 'finish', 'done', 'activate',
  * 'deactivate' and an 'error' event. Only 'execute' returns you a value. The other events are triggered by the
  * methods of the skill.
  * Note: all events can only be triggered if the initialization was successful. Therefore this does NOT need to be
