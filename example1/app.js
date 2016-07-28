@@ -83,8 +83,8 @@ Parameter1.once('init', function(){
  * SKILLS
  *
  * WORKING WITH EVENTS II
- * Each skill has an 'execute', 'executeTrue', 'executeFalse', 'ready', 'busy', 'done', 'activate', 'deactivate'
- * and an 'error' event. Only 'execute' returns you a value. The other events are triggered by the methods of the skill.
+ * 'deactivate' and an 'error' event. Only 'execute' returns you a value. The other events are triggered by the
+ * methods of the skill.
  * Note: all events can only be triggered if the initialization was successful. Therefore this does NOT need to be
  * packed into the ExampleModule.once('init', function(){...}).
  *
@@ -125,19 +125,26 @@ OrangeJuice.on('execute', function(value){
 OrangeJuice.on('executeTrue', function(){
   if(OrangeJuice.ready.value){
     OrangeJuice.setBusy();
-    // do something with parameter value
-    console.log(OrangeJuice.parameter.Amount.Value.value);
-    console.log(OrangeJuice.parameter.Amount.StringValue.value);
-    // the timeout stands for the machine doing something
-    setTimeout(function(){
-      OrangeJuice.finishTask()},2000);
-    setTimeout(function(){
-      OrangeJuice.setDone();
-      OrangeJuice.setReadyWhenExecuteIsReset();
-    },3000);
   } else {
     console.log('skill is not ready. try again.');
   }
 });
 
+OrangeJuice.on('busy', function(){
+  // do something with parameter value
+  console.log(OrangeJuice.parameter.Amount.Value.value);
+  console.log(OrangeJuice.parameter.Amount.StringValue.value);
+  // the timeout stands for the machine doing something
+  setTimeout(function(){
+    OrangeJuice.finishTask()
+  },2000);
+});
+
+OrangeJuice.on('finish', function(){
+  // do something...
+  setTimeout(function(){
+    OrangeJuice.setDone();
+    OrangeJuice.setReadyWhenExecuteIsReset();
+  },3000);
+});
 
