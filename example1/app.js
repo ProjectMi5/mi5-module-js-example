@@ -83,6 +83,7 @@ Parameter1.once('init', function(){
  * SKILLS
  *
  * WORKING WITH EVENTS II
+ * Each module has a 'reset' event. It will be triggered, if the opcua variable reset is set true.
  * Each skill has an 'execute', 'executeTrue', 'executeFalse', 'ready', 'busy', 'finish', 'done', 'activate',
  * 'deactivate' and an 'error' event. Only 'execute' returns you a value. The other events are triggered by the
  * methods of the skill.
@@ -111,6 +112,8 @@ Parameter1.once('init', function(){
  * Each parameter has the following opc ua variables:
  * -> Value
  * -> StringValue
+ * Each module has the following opc ua variables:
+ * -> reset
  * Each opc ua variable has a value (variable.value) and you can use the following methods
  * -> variable.onChangce(function(value){})
  * -> variable.oneChange(function(value){})
@@ -148,4 +151,12 @@ OrangeJuice.on('finish', function(){
     OrangeJuice.setReadyWhenExecuteIsReset();
   },3000);
 });
+
+ExampleModule.on('reset', function(){
+  console.log('reset was called.');
+  // do something and afterwards reset each skill.
+  ExampleModule.resetSkills();
+});
+
+
 
