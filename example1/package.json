@@ -11,5 +11,13 @@
   "dependencies": {
     "mi5-module-js": "git+https://github.com/ProjectMi5/mi5-module-js.git"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProjectMi5/mi5-module-js-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ProjectMi5/mi5-module-js-example/issues"
+  },
+  "homepage": "https://github.com/ProjectMi5/mi5-module-js-example#readme"
 }
