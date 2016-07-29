@@ -21,7 +21,11 @@ var ServerStructure = {
 var moduleSettings = {
 	opcua: {
 		server: ServerStructure
-	}
+	},
+	position: 2000, // optional
+	positionOffset: 50, // optional, positionOffset will be added to position input
+	storage: './data' // optional, stores data at the path specified here
+	// data in the storage overwrites the 'position' value, so delete the './data' folder to completely reset the module
 };
 
 exports.moduleSettings = moduleSettings;
