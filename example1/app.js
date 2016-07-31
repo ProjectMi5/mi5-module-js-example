@@ -115,7 +115,7 @@ Parameter1.once('init', function(){
  * Each module has the following opc ua variables:
  * -> reset
  * Each opc ua variable has a value (variable.value) and you can use the following methods
- * -> variable.onChangce(function(value){})
+ * -> variable.onChange(function(value){})
  * -> variable.oneChange(function(value){})
  * -> variable.write(value)
  * -> variable.read(function(value){})
