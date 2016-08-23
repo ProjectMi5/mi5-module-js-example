@@ -1,6 +1,6 @@
 # Your own Mi5 Module written in node.js
 
-With node-module-js you can easily write your own mi5 module. Here is a boilerplate.
+With [mi5-module-js](https://github.com/ProjectMi5/mi5-module-js) you can easily write your own mi5 module. Here is a boilerplate.
 
 ## What does it do?
 
