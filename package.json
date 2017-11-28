@@ -1,0 +1,22 @@
+{
+  "name": "mi5-module-js-example",
+  "version": "1.0.0",
+  "main": "example2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProjectMi5/mi5-module-js-example.git"
+  },
+  "author": "Dominik Serve",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ProjectMi5/mi5-module-js-example/issues"
+  },
+  "homepage": "https://github.com/ProjectMi5/mi5-module-js-example#readme",
+  "description": "",
+  "dependencies": {
+    "mi5-module": "git+https://github.com/ProjectMi5/mi5-module-js.git"
+  }
+}
