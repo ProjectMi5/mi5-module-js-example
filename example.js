@@ -1,6 +1,7 @@
 const Mi5Module = require('mi5-module').Mi5Module;
 let module1 = new Mi5Module('module1',undefined, {port: 4842});
 let skill1 = module1.addSkill('skill1');
+let skill2 = module1.addSkill('skill2');
 let param1 = skill1.addInputParameter("distance", "Double", 2);
 let param2 = skill1.addInputParameter("height", "Double", 2);
 let param3 = skill1.addOutputParameter("weight", "Double", 2);
